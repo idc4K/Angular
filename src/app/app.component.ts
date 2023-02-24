@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { interval, Observable } from 'rxjs';
 import { Data } from './module/snap.mode';
 
 @Component({
@@ -7,5 +8,12 @@ import { Data } from './module/snap.mode';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  ngOnInit(){}
+
+  interval$ ! : Observable<number>
+  ngOnInit(){
+   this.interval$ = interval(1000)
+  } 
+  onClick(){
+
+  }
 }

@@ -11,20 +11,20 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
-  interval$ !: Observable<string>
-  constructor(private router: Router){}
+  // interval$ !: Observable<number>
+
   ngOnInit() {
 
-    this.interval$ = interval(1000).pipe(
-      filter(value => value % 3 === 0),
-      map(value => value % 2 == 0 ? `${value} nombre pair` : `${value} nombre impair`),
-      tap(text => this.Logger(text))
-    )
+    // this.interval$ = interval(1000).pipe(
+    //   // filter(value => value % 3 === 0),
+    //   // map(value => value % 2 == 0 ? `${value} nombre pair` : `${value} nombre impair`),
+    //   // tap(text => this.Logger(text))
+    // )
   } 
 
-  Logger(text : string){
-    console.log(`Log : ${text}`)
-  }
+  // Logger(text : string){
+  //   console.log(`Log : ${text}`)
+  // }
   onClick(){
 
   }

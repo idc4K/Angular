@@ -7,12 +7,13 @@ import { interval } from 'rxjs';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit{
+  userEmail ! : string
   ngOnInit(): void {
       
   }
-  onClick(){
-    const interva$ = interval(1000)
 
-    setTimeout(() => interva$.subscribe((value) => console.log(value)), 3000)
+  onSubmit(){
+    console.log(this.userEmail)
   }
+ 
 }
